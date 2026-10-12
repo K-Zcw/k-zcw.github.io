@@ -1,0 +1,38 @@
+baseURL = 'https://k-zcw.github.io/'
+locale = 'en-us'
+title = 'Notes by ZCW'
+theme = 'PaperMod'
+
+
+[params.homeInfoParams]
+Title = "Notes by ZCW"
+Content = """
+Stories, films, and observations.
+A personal archive of things I don't want to forget.
+"""
+
+
+[menu]
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Posts"
+url = "/posts/"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 3
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+[params]
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
