@@ -1,16 +1,15 @@
 baseURL = 'https://k-zcw.github.io/'
 locale = 'en-us'
-title = 'Notes by ZCW'
+title = 'Notes by K'
 theme = 'PaperMod'
 
 
 [params.homeInfoParams]
 Title = "Notes by ZCW"
 Content = """
-Stories, films, and observations.
-A personal archive of things I don't want to forget.
+<div class="tornado">🌪️</div>
 """
-
+hidePosts = true
 
 [menu]
 
@@ -36,3 +35,27 @@ tag = "tags"
 [params]
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
+ShowReadingTime = true
+ShowShareButtons = false
+DateFormat = "2006-01-02 15:04:05"
+ShowCodeCopyButtons = true
+
+[params.editPost]
+URL = "https://github.com/K-Zcw/k-zcw.github.io/edit/main/content"
+Text = "Edit this post"
+appendFilePath = true
+
+[[menu.main]]
+name = "Categories"
+url = "/categories/"
+weight = 4
+
+[[menu.main]]
+name = "Archives"
+url = "/archives/"
+weight = 5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

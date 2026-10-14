@@ -1,0 +1,36 @@
+.tornado {
+    font-size: 200px;
+    display: inline-block;
+    animation:
+        tornado-spin 10s linear infinite,
+        tornado-float 4s ease-in-out infinite;
+
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+@keyframes tornado-spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@keyframes tornado-float {
+
+    0%,100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -10px;
+    }
+
+}

@@ -1,0 +1,22 @@
+{{- define "main" }}
+
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+</header>
+
+{{- range (where site.RegularPages "Type" "posts").GroupByDate "2006" }}
+
+<h2>{{ .Key }}</h2>
+
+<ul>
+{{- range .Pages }}
+<li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <span>{{ .Date.Format "2006-01-02" }}</span>
+</li>
+{{- end }}
+</ul>
+
+{{- end }}
+
+{{- end }}

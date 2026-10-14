@@ -10,4 +10,4 @@ I write about:
 - Books
 - Travel
 - Creative projects
-- Things I learn and observe.
+- Things learn and observe.
