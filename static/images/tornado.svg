@@ -1,47 +1,68 @@
-<svg width="140" height="140" viewBox="0 0 140 140"
+<svg width="160" height="160" viewBox="0 0 160 160"
 xmlns="http://www.w3.org/2000/svg">
 
 <defs>
-  <radialGradient id="wind" cx="50%" cy="50%">
-    <stop offset="0%" stop-color="#999" opacity="0.8"/>
-    <stop offset="100%" stop-color="#999" opacity="0.1"/>
-  </radialGradient>
+
+<linearGradient id="storm" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#A8BBCB" stop-opacity="0.8"/>
+<stop offset="100%" stop-color="#526D82" stop-opacity="0.2"/>
+</linearGradient>
+
 </defs>
 
-<g>
 
-<!-- 外层旋转气流 -->
-<path d="
-M30 35
-C70 10,120 35,100 65
-C85 85,45 70,55 100
+<!-- 云 -->
+
+<ellipse
+cx="80"
+cy="35"
+rx="45"
+ry="18"
+fill="#A8BBCB"
+opacity="0.25"
+/>
+
+
+<!-- 外旋涡 -->
+
+<path
+d="
+M25 45
+C80 15 145 45 115 80
+C90 110 45 85 60 120
 "
 fill="none"
-stroke="#7C9AB5"
+stroke="url(#storm)"
+stroke-width="18"
+stroke-linecap="round"
+/>
+
+
+<!-- 内旋涡 -->
+
+<path
+d="
+M45 60
+C85 40 120 60 95 85
+C75 105 65 90 75 115
+"
+fill="none"
+stroke="#607D9B"
 stroke-width="10"
 stroke-linecap="round"
-opacity="0.45"/>
-
-
-<path d="
-M25 55
-C65 25,115 50,85 75
-C60 95,45 80,65 105
-"
-fill="none"
-stroke="#7C9AB5"
-stroke-width="8"
-stroke-linecap="round"
-opacity="0.65"/>
+opacity="0.7"
+/>
 
 
 <!-- 风眼 -->
-<ellipse cx="70" cy="105"
-rx="18"
-ry="8"
-fill="#7C9AB5"
-opacity="0.25"/>
 
-</g>
+<circle
+cx="80"
+cy="120"
+r="8"
+fill="#526D82"
+opacity="0.5"
+/>
+
 
 </svg>

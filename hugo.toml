@@ -40,6 +40,8 @@ DateFormat = "2006-01-02 15:04:05"
 ShowCodeCopyButtons = true
 hideHomePosts = true
 ShowSearch = true
+ShowWordCount = true
+hasCJKLanguage = true
 
 [params.editPost]
 URL = "https://github.com/K-Zcw/k-zcw.github.io/edit/main/content"

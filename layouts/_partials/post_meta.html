@@ -4,12 +4,22 @@
     {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_long" site.Params.DateFormat)))) }}
 {{- end }}
 
-{{- if (.Param "ShowReadingTime") -}}
-    {{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime)))) }}
-{{- end }}
 
 {{- if (.Param "ShowWordCount") -}}
-    {{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "words" .WordCount | default (printf "%d words" .WordCount)))) }}
+    {{- $text := .Plain -}}
+    {{- $chineseCount := len (findRE `\p{Han}` $text) -}}
+    {{- $scratch.Add "meta" (slice (printf "<span>%d 字</span>" $chineseCount)) }}
+{{- end }}
+
+
+{{- if (.Param "ShowReadingTime") -}}
+    {{- $text := .Plain -}}
+    {{- $charCount := len (findRE `\p{Han}` $text) -}}
+    {{- $minutes := div (add $charCount 399) 400 -}}
+    {{- if lt $minutes 1 -}}
+        {{- $minutes = 1 -}}
+    {{- end -}}
+    {{- $scratch.Add "meta" (slice (printf "<span>%d min</span>" $minutes)) }}
 {{- end }}
 
 {{- if not (.Param "hideAuthor") -}}
