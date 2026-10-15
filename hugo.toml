@@ -9,7 +9,6 @@ Title = "Notes by ZCW"
 Content = """
 <div class="tornado">🌪️</div>
 """
-hidePosts = true
 
 [menu]
 
@@ -39,6 +38,8 @@ ShowReadingTime = true
 ShowShareButtons = false
 DateFormat = "2006-01-02 15:04:05"
 ShowCodeCopyButtons = true
+hideHomePosts = true
+ShowSearch = true
 
 [params.editPost]
 URL = "https://github.com/K-Zcw/k-zcw.github.io/edit/main/content"
@@ -54,6 +55,14 @@ weight = 4
 name = "Archives"
 url = "/archives/"
 weight = 5
+
+[[menu.main]]
+name = "Search"
+url = "/search/"
+weight = 6
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
 
 [markup]
   [markup.goldmark]

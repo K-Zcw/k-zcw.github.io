@@ -1,0 +1,9 @@
+{{- define "main" }}
+
+<main class="main">
+    {{- if .Site.Params.homeInfoParams }}
+    {{ partial "home_info.html" . }}
+    {{- end }}
+</main>
+
+{{- end }}
