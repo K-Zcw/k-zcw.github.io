@@ -1,9 +1,42 @@
 {{- define "main" }}
 
 <main class="main">
-    {{- if .Site.Params.homeInfoParams }}
-    {{ partial "home_info.html" . }}
-    {{- end }}
+    <div class="custom-home">
+        <div class="home-title">
+            <h1>Notes by ZCW</h1>
+            <p>Stories, films, and observations</p>
+
+            <div class="home-door">
+
+    <span class="door-hidden">there are things here.</span>
+
+    <div class="home-posts">
+        {{- range first 3 site.RegularPages }}
+            <article class="post-entry">
+                <a href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+                    <div class="entry-header">
+                        <h2>{{ .Title }}</h2>
+                    </div>
+
+                    <div class="entry-content">
+                        {{ .Summary }}
+                    </div>
+
+                    <div class="entry-footer">
+                        {{ partial "post_meta.html" . }}
+                    </div>
+                </a>
+            </article>
+        {{- end }}
+    </div>
+
+    <a href="/posts/" class="door-arrow" aria-label="Posts">
+        ↓
+    </a>
+
+</div>
+        </div>
+    </div>
 </main>
 
 {{- end }}
