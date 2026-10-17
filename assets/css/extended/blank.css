@@ -1,0 +1,448 @@
+
+/* ===== Homepage editorial header ===== */
+
+/* 只影响首页的 Home Info 区域 */
+.first-entry.home-info {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    min-height: unset;
+    margin: 24px 0 32px;
+    padding: 32px 30px 28px;
+
+    background-color: #f0f4f8;
+    border: 1px solid #d6e0e9;
+    border-radius: 8px;
+    box-shadow: none;
+
+    /* 右上角的浅蓝灰色几何装饰 */
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(105, 135, 164, 0.22) 1px,
+            transparent 1.6px
+        );
+    background-size: 18px 18px;
+    background-position: right 12px top 12px;
+    background-repeat: no-repeat;
+}
+
+/* 小号栏目标签 */
+.first-entry.home-info::before {
+    content: "PERSONAL JOURNAL  /  EST. 2026";
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 22px;
+    color: #6b8095;
+
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    line-height: 1.6;
+}
+
+/* 右上角的圆环和斜线 */
+.first-entry.home-info::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 38px;
+    right: 28px;
+
+    width: 112px;
+    height: 112px;
+    border: 1px solid rgba(105, 135, 164, 0.23);
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 49.6%,
+            rgba(105, 135, 164, 0.22) 50%,
+            transparent 50.8%
+        );
+    pointer-events: none;
+}
+
+/* 标题 */
+.first-entry.home-info .entry-header,
+.first-entry.home-info .entry-content {
+    position: relative;
+    z-index: 1;
+}
+
+.first-entry.home-info .entry-header h1 {
+    margin-bottom: 12px;
+
+    color: #263b50;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+    line-height: 1.15;
+}
+
+/* 简介 */
+.first-entry.home-info .entry-content {
+    max-width: 540px;
+    color: #62758a;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* 深色模式 */
+body.dark .first-entry.home-info {
+    background-color: #1d2936;
+    border-color: #354658;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(164, 187, 210, 0.18) 1px,
+            transparent 1.6px
+        );
+}
+
+body.dark .first-entry.home-info::after {
+    border-color: rgba(164, 187, 210, 0.2);
+    background:
+        linear-gradient(
+            135deg,
+            transparent 49.6%,
+            rgba(164, 187, 210, 0.2) 50%,
+            transparent 50.8%
+        );
+}
+
+body.dark .first-entry.home-info::before {
+    color: #9aafc4;
+}
+
+body.dark .first-entry.home-info .entry-header h1 {
+    color: #e0e8f0;
+}
+
+body.dark .first-entry.home-info .entry-content {
+    color: #afbdcb;
+}
+
+/* 手机屏幕适配 */
+@media (max-width: 600px) {
+    .first-entry.home-info {
+        padding: 25px 20px 22px;
+        margin-top: 18px;
+    }
+
+    .first-entry.home-info::before {
+        margin-bottom: 20px;
+        font-size: 10px;
+    }
+
+    .first-entry.home-info::after {
+        top: 48px;
+        right: 14px;
+        width: 76px;
+        height: 76px;
+        opacity: 0.65;
+    }
+
+    .first-entry.home-info .entry-header h1 {
+        font-size: clamp(2rem, 9vw, 2.7rem);
+    }
+
+    .first-entry.home-info .entry-content {
+        font-size: 14px;
+    }
+}
+
+
+/* ===== Custom homepage editorial header ===== */
+
+.custom-home .home-title {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    margin: 24px 0 32px;
+    padding: 34px 30px 28px;
+
+    background-color: #f3f4f5;
+border: 1px solid #e2e5e8;
+    border-radius: 8px;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(105, 135, 164, 0.22) 1px,
+            transparent 1.6px
+        );
+    background-size: 18px 18px;
+    background-position: right 12px top 12px;
+    background-repeat: no-repeat;
+}
+
+.custom-home .home-title::before {
+    content: "PERSONAL JOURNAL  /  EST. 2026";
+    display: block;
+    margin-bottom: 22px;
+
+    color: #6b8095;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    line-height: 1.6;
+}
+
+.custom-home .home-title::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 38px;
+    right: 28px;
+
+    width: 112px;
+    height: 112px;
+    border: 1px solid rgba(105, 135, 164, 0.23);
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 49.6%,
+            rgba(105, 135, 164, 0.22) 50%,
+            transparent 50.8%
+        );
+
+    pointer-events: none;
+}
+
+.custom-home .home-title h1 {
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 12px;
+    color: #263b50;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+    line-height: 1.15;
+}
+
+.custom-home .home-title p {
+    position: relative;
+    z-index: 1;
+
+    max-width: 540px;
+    margin-bottom: 0;
+    color: #62758a;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Dark mode */
+body.dark .custom-home .home-title {
+    background-color: #1d2936;
+    border-color: #354658;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(164, 187, 210, 0.18) 1px,
+            transparent 1.6px
+        );
+}
+
+body.dark .custom-home .home-title::before {
+    color: #9aafc4;
+}
+
+body.dark .custom-home .home-title::after {
+    border-color: rgba(164, 187, 210, 0.2);
+    background:
+        linear-gradient(
+            135deg,
+            transparent 49.6%,
+            rgba(164, 187, 210, 0.2) 50%,
+            transparent 50.8%
+        );
+}
+
+body.dark .custom-home .home-title h1 {
+    color: #e0e8f0;
+}
+
+body.dark .custom-home .home-title p {
+    color: #afbdcb;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .custom-home .home-title {
+        margin-top: 18px;
+        padding: 25px 20px 22px;
+    }
+
+    .custom-home .home-title::before {
+        margin-bottom: 20px;
+        font-size: 10px;
+    }
+
+    .custom-home .home-title::after {
+        top: 48px;
+        right: 14px;
+        width: 76px;
+        height: 76px;
+        opacity: 0.65;
+    }
+
+    .custom-home .home-title h1 {
+        font-size: clamp(2rem, 9vw, 2.7rem);
+    }
+
+    .custom-home .home-title p {
+        font-size: 14px;
+    }
+}
+
+
+/* ===== Journal masthead + navigation ===== */
+
+.journal-header {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: #dce6f0;
+    color: #263b50;
+    border-bottom: 1px solid #aabacb;
+}
+
+.journal-masthead {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 22px 32px 18px;
+    box-sizing: border-box;
+}
+
+.journal-meta,
+.journal-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.journal-meta {
+    color: #586f87;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+}
+
+.journal-title {
+    margin: 22px 0 16px;
+    padding: 17px 0;
+    border-top: 1px solid #aabacb;
+    border-bottom: 1px solid #aabacb;
+}
+
+.journal-title a {
+    color: #263b50;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 5.5vw, 64px);
+    font-weight: 400;
+    letter-spacing: 0.045em;
+    text-decoration: none;
+}
+
+.journal-description {
+    color: #586f87;
+    font-size: 13px;
+}
+
+.journal-header .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.journal-header .logo {
+    margin: 0;
+}
+
+.journal-header .menu {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.journal-header .menu a {
+    color: #263b50;
+}
+
+.journal-header .menu a:hover {
+    color: #718ba5;
+}
+
+.journal-header .logo-switches {
+    padding: 0;
+}
+
+body.dark .journal-header {
+    background: #1d2936;
+    color: #e0e8f0;
+    border-color: #354658;
+}
+
+body.dark .journal-meta,
+body.dark .journal-description {
+    color: #afbdcb;
+}
+
+body.dark .journal-title {
+    border-color: #46596d;
+}
+
+body.dark .journal-title a,
+body.dark .journal-header .menu a {
+    color: #e0e8f0;
+}
+
+@media (max-width: 700px) {
+    .journal-masthead {
+        padding: 18px;
+    }
+
+    .journal-meta {
+        font-size: 9px;
+        letter-spacing: 0.06em;
+    }
+
+    .journal-title {
+        margin: 17px 0 14px;
+        padding: 15px 0;
+    }
+
+    .journal-title a {
+        font-size: clamp(27px, 8vw, 42px);
+    }
+
+    .journal-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .journal-header .header-nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .journal-header .menu {
+        gap: 16px;
+    }
+}
