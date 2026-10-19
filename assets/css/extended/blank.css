@@ -446,3 +446,9 @@ body.dark .journal-header .menu a {
         gap: 16px;
     }
 }
+.post-count {
+    color: var(--secondary);
+    font-size: 14px;
+    margin-top: -12px;
+    margin-bottom: 28px;
+}
